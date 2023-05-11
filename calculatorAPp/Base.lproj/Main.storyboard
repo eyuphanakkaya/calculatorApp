@@ -1,24 +1,493 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculatorAPp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAE-JE-1eM">
+                                <rect key="frame" x="0.0" y="402" width="393" height="450"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZD-0d-IK8">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="88"/>
+                                        <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="3hB-mJ-id2"/>
+                                            <constraint firstAttribute="width" constant="99" id="3kG-lS-p1J"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="L2c-az-HXw"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="QoT-r8-gqg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="AC">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="temizleTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PgC-3G-YJ2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL0-wp-0g0">
+                                        <rect key="frame" x="101" y="0.0" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="Ny0-9w-ctV"/>
+                                            <constraint firstAttribute="width" constant="96" id="ng9-KY-NkX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="delete.right" catalog="system">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="silTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJM-6I-U11"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eH5-vh-M37">
+                                        <rect key="frame" x="199" y="0.0" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="9iD-jF-URF"/>
+                                            <constraint firstAttribute="width" constant="96" id="yeM-2k-aqt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="%">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="yuzdeTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G5a-M4-3qR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbC-dp-kZ3">
+                                        <rect key="frame" x="297" y="0.0" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="1mx-HA-1Fp"/>
+                                            <constraint firstAttribute="height" constant="88" id="P7m-ob-eM1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="/">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="bolmeTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v4K-5h-BsU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i75-F5-8iU">
+                                        <rect key="frame" x="0.0" y="92" width="99" height="88"/>
+                                        <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="HNJ-fe-Sfi"/>
+                                            <constraint firstAttribute="width" constant="99" id="jb5-fx-9fk"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="7">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sayiYediTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JxO-AP-H1b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezN-0X-uaM">
+                                        <rect key="frame" x="101" y="92" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="Pn6-0d-cRm"/>
+                                            <constraint firstAttribute="height" constant="88" id="uGJ-Kh-imY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="8">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sayiSekizTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k2w-8g-s00"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1g-Sd-xif">
+                                        <rect key="frame" x="199" y="92" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="MMR-SY-1OO"/>
+                                            <constraint firstAttribute="width" constant="96" id="wSg-Ac-t4K"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="9">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sayiDokuzTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tlm-8J-hfi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bms-1i-PYO">
+                                        <rect key="frame" x="0.0" y="276" width="99" height="88"/>
+                                        <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="99" id="BJK-5r-4g8"/>
+                                            <constraint firstAttribute="height" constant="88" id="XHs-ZQ-HzO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="1">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sayiBirTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgs-1Q-ZG6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIA-NE-Kzf">
+                                        <rect key="frame" x="199" y="276" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="S9Y-8w-a6V"/>
+                                            <constraint firstAttribute="width" constant="96" id="qQz-ar-4kt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="3">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sayiUcTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CBd-kn-Dev"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aME-BU-SSF">
+                                        <rect key="frame" x="297" y="276" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="YuS-mQ-RCn"/>
+                                            <constraint firstAttribute="width" constant="96" id="x7F-RT-npj"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="+">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="toplaTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7E-N3-0LD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9b-Ir-E5O">
+                                        <rect key="frame" x="0.0" y="184" width="99" height="88"/>
+                                        <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="UJG-u0-6Fw"/>
+                                            <constraint firstAttribute="width" constant="99" id="Udg-Oy-9IB"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="4">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sayiDortTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QRT-DL-Ls8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-bI-wgL">
+                                        <rect key="frame" x="101" y="184" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="rkN-mg-NFV"/>
+                                            <constraint firstAttribute="width" constant="96" id="tP6-G3-wUS"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="5">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sayiBesTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sdM-SI-I3N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-Ls-iSI">
+                                        <rect key="frame" x="199" y="184" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="H6q-ss-v9w"/>
+                                            <constraint firstAttribute="width" constant="96" id="lNP-wU-JXx"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="6">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sayiAltiTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FUm-wF-Tdd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjS-PU-NPe">
+                                        <rect key="frame" x="297" y="184" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="8Ng-9x-9lB"/>
+                                            <constraint firstAttribute="height" constant="88" id="No5-iY-b2h"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="-">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="67"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="cikarTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HI-Ih-dvM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxq-az-QPN">
+                                        <rect key="frame" x="0.0" y="370" width="197" height="88"/>
+                                        <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="197" id="4Vd-T5-Fop"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="FQy-f2-fi2"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="197" id="Iz0-Do-2qo"/>
+                                            <constraint firstAttribute="height" constant="88" id="gpJ-Zo-OuX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="0">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sifirTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DBn-Vq-0kZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DC-Wc-3ka">
+                                        <rect key="frame" x="199" y="370" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="7FN-Cd-j8v"/>
+                                            <constraint firstAttribute="height" constant="88" id="Lry-MV-VG1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=",">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="virgulTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1wq-kx-MgS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS5-nv-P7L">
+                                        <rect key="frame" x="297" y="370" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="GRQ-Jq-c6d"/>
+                                            <constraint firstAttribute="height" constant="88" id="VKL-Ru-MJc"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="=">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sonucTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ibk-cc-Kus"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXm-pW-8Zm">
+                                        <rect key="frame" x="101" y="276" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="1hU-Lq-1C9"/>
+                                            <constraint firstAttribute="height" constant="88" id="2tL-DN-sNE"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="2">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sayiIkiTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GtI-07-6cs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMd-WG-IzU">
+                                        <rect key="frame" x="297" y="92" width="96" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="bJY-oZ-YD7"/>
+                                            <constraint firstAttribute="height" constant="88" id="zri-X0-gbI"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="X">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="carpTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C3X-si-QEO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="B1g-Sd-xif" firstAttribute="top" secondItem="eH5-vh-M37" secondAttribute="bottom" constant="4" id="1zI-gQ-BGd"/>
+                                    <constraint firstItem="B1g-Sd-xif" firstAttribute="top" secondItem="eH5-vh-M37" secondAttribute="bottom" constant="4" id="2X9-TR-IgZ"/>
+                                    <constraint firstItem="LS5-nv-P7L" firstAttribute="leading" secondItem="3DC-Wc-3ka" secondAttribute="trailing" constant="2" id="3no-dF-iq1"/>
+                                    <constraint firstItem="3DC-Wc-3ka" firstAttribute="leading" secondItem="rxq-az-QPN" secondAttribute="trailing" constant="2" id="4WY-dG-rE9"/>
+                                    <constraint firstItem="rxq-az-QPN" firstAttribute="leading" secondItem="MAE-JE-1eM" secondAttribute="leading" id="51T-Wq-RnK"/>
+                                    <constraint firstItem="HZD-0d-IK8" firstAttribute="leading" secondItem="MAE-JE-1eM" secondAttribute="leading" id="9VY-bb-s2z"/>
+                                    <constraint firstItem="OdH-Ls-iSI" firstAttribute="leading" secondItem="B1g-Sd-xif" secondAttribute="leading" id="Aln-xi-5aq"/>
+                                    <constraint firstItem="HZD-0d-IK8" firstAttribute="top" secondItem="MAE-JE-1eM" secondAttribute="top" id="CwQ-LD-fpl"/>
+                                    <constraint firstItem="JL0-wp-0g0" firstAttribute="top" secondItem="MAE-JE-1eM" secondAttribute="top" id="DIZ-0Y-IpA"/>
+                                    <constraint firstAttribute="bottom" secondItem="3DC-Wc-3ka" secondAttribute="bottom" constant="-8" id="EFb-Q8-EHO"/>
+                                    <constraint firstItem="sbC-dp-kZ3" firstAttribute="leading" secondItem="eH5-vh-M37" secondAttribute="trailing" constant="2" id="EkT-z1-Tj6"/>
+                                    <constraint firstItem="WjS-PU-NPe" firstAttribute="top" secondItem="rMd-WG-IzU" secondAttribute="bottom" constant="4" id="GPT-HX-tGS"/>
+                                    <constraint firstItem="rMd-WG-IzU" firstAttribute="top" secondItem="sbC-dp-kZ3" secondAttribute="bottom" constant="4" id="GQS-J0-7bE"/>
+                                    <constraint firstItem="eH5-vh-M37" firstAttribute="top" secondItem="MAE-JE-1eM" secondAttribute="top" id="HD2-hD-hdR"/>
+                                    <constraint firstItem="ezN-0X-uaM" firstAttribute="leading" secondItem="i75-F5-8iU" secondAttribute="trailing" constant="2" id="HO3-Ae-LD5"/>
+                                    <constraint firstItem="rMd-WG-IzU" firstAttribute="leading" secondItem="B1g-Sd-xif" secondAttribute="trailing" constant="2" id="IUG-EB-PIW"/>
+                                    <constraint firstItem="aME-BU-SSF" firstAttribute="top" secondItem="WjS-PU-NPe" secondAttribute="bottom" constant="4" id="Io1-bO-t1f"/>
+                                    <constraint firstItem="3DC-Wc-3ka" firstAttribute="leading" secondItem="rxq-az-QPN" secondAttribute="trailing" constant="2" id="J8U-tT-1Ka"/>
+                                    <constraint firstItem="rxq-az-QPN" firstAttribute="leading" secondItem="MAE-JE-1eM" secondAttribute="leading" id="JTQ-zW-DZ7"/>
+                                    <constraint firstItem="wIA-NE-Kzf" firstAttribute="top" secondItem="OdH-Ls-iSI" secondAttribute="bottom" constant="4" id="JkO-sR-Hu9"/>
+                                    <constraint firstItem="rxq-az-QPN" firstAttribute="top" secondItem="bms-1i-PYO" secondAttribute="bottom" constant="6" id="K8J-d2-BSZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="rxq-az-QPN" secondAttribute="bottom" constant="-8" id="KFX-Cl-HRD"/>
+                                    <constraint firstItem="R9b-Ir-E5O" firstAttribute="top" secondItem="i75-F5-8iU" secondAttribute="bottom" constant="4" id="Kjo-ll-mTW"/>
+                                    <constraint firstAttribute="bottom" secondItem="LS5-nv-P7L" secondAttribute="bottom" constant="-8" id="Me9-By-4yE"/>
+                                    <constraint firstItem="Ebo-bI-wgL" firstAttribute="top" secondItem="ezN-0X-uaM" secondAttribute="bottom" constant="4" id="OhZ-Gd-8zF"/>
+                                    <constraint firstAttribute="trailing" secondItem="WjS-PU-NPe" secondAttribute="trailing" id="P6X-fk-zwN"/>
+                                    <constraint firstItem="i75-F5-8iU" firstAttribute="leading" secondItem="MAE-JE-1eM" secondAttribute="leading" id="PYv-Nz-dwR"/>
+                                    <constraint firstItem="ezN-0X-uaM" firstAttribute="top" secondItem="JL0-wp-0g0" secondAttribute="bottom" constant="4" id="QzR-3K-hX8"/>
+                                    <constraint firstItem="LS5-nv-P7L" firstAttribute="top" secondItem="aME-BU-SSF" secondAttribute="bottom" constant="6" id="Rlc-1Y-lf5"/>
+                                    <constraint firstItem="bms-1i-PYO" firstAttribute="top" secondItem="R9b-Ir-E5O" secondAttribute="bottom" constant="4" id="SkL-wV-kln"/>
+                                    <constraint firstAttribute="bottom" secondItem="rxq-az-QPN" secondAttribute="bottom" constant="-8" id="T7j-FH-LG2"/>
+                                    <constraint firstItem="sbC-dp-kZ3" firstAttribute="leading" secondItem="eH5-vh-M37" secondAttribute="trailing" constant="2" id="TPY-fn-0Mu"/>
+                                    <constraint firstItem="eXm-pW-8Zm" firstAttribute="leading" secondItem="Ebo-bI-wgL" secondAttribute="leading" id="Xlp-Ch-pkn"/>
+                                    <constraint firstItem="3DC-Wc-3ka" firstAttribute="top" secondItem="wIA-NE-Kzf" secondAttribute="bottom" constant="6" id="YVe-qT-BNd"/>
+                                    <constraint firstItem="HZD-0d-IK8" firstAttribute="top" secondItem="MAE-JE-1eM" secondAttribute="top" id="aAg-li-h8C"/>
+                                    <constraint firstItem="sbC-dp-kZ3" firstAttribute="top" secondItem="MAE-JE-1eM" secondAttribute="top" id="aIH-2f-83F"/>
+                                    <constraint firstItem="sbC-dp-kZ3" firstAttribute="leading" secondItem="eH5-vh-M37" secondAttribute="trailing" constant="2" id="atu-5G-Zfc"/>
+                                    <constraint firstItem="eH5-vh-M37" firstAttribute="leading" secondItem="JL0-wp-0g0" secondAttribute="trailing" constant="2" id="b2V-yj-cd3"/>
+                                    <constraint firstItem="i75-F5-8iU" firstAttribute="top" secondItem="HZD-0d-IK8" secondAttribute="bottom" constant="4" id="b5m-Gv-aZc"/>
+                                    <constraint firstAttribute="trailing" secondItem="rMd-WG-IzU" secondAttribute="trailing" id="gZI-F4-3qV"/>
+                                    <constraint firstItem="rxq-az-QPN" firstAttribute="leading" secondItem="MAE-JE-1eM" secondAttribute="leading" id="hY0-BB-4Gb"/>
+                                    <constraint firstItem="ezN-0X-uaM" firstAttribute="top" secondItem="JL0-wp-0g0" secondAttribute="bottom" constant="4" id="iAt-0N-VL3"/>
+                                    <constraint firstItem="LS5-nv-P7L" firstAttribute="leading" secondItem="3DC-Wc-3ka" secondAttribute="trailing" constant="2" id="j1C-X1-Xdo"/>
+                                    <constraint firstAttribute="trailing" secondItem="LS5-nv-P7L" secondAttribute="trailing" id="lZd-f2-uQd"/>
+                                    <constraint firstAttribute="bottom" secondItem="3DC-Wc-3ka" secondAttribute="bottom" constant="-8" id="n9Q-GT-B3W"/>
+                                    <constraint firstAttribute="bottom" secondItem="LS5-nv-P7L" secondAttribute="bottom" constant="-8" id="nfK-6x-gqP"/>
+                                    <constraint firstItem="eXm-pW-8Zm" firstAttribute="top" secondItem="Ebo-bI-wgL" secondAttribute="bottom" constant="4" id="ngr-qZ-uB5"/>
+                                    <constraint firstAttribute="trailing" secondItem="sbC-dp-kZ3" secondAttribute="trailing" id="oOV-1m-Icy"/>
+                                    <constraint firstItem="JL0-wp-0g0" firstAttribute="leading" secondItem="HZD-0d-IK8" secondAttribute="trailing" constant="2" id="ohJ-YW-PCQ"/>
+                                    <constraint firstItem="B1g-Sd-xif" firstAttribute="leading" secondItem="ezN-0X-uaM" secondAttribute="trailing" constant="2" id="p3i-b3-MQu"/>
+                                    <constraint firstAttribute="trailing" secondItem="aME-BU-SSF" secondAttribute="trailing" id="pad-HB-Ycw"/>
+                                    <constraint firstItem="OdH-Ls-iSI" firstAttribute="leading" secondItem="wIA-NE-Kzf" secondAttribute="leading" id="qZI-8c-QLi"/>
+                                    <constraint firstAttribute="trailing" secondItem="LS5-nv-P7L" secondAttribute="trailing" id="rvm-Rw-1Zg"/>
+                                    <constraint firstItem="3DC-Wc-3ka" firstAttribute="leading" secondItem="rxq-az-QPN" secondAttribute="trailing" constant="2" id="t0L-mz-nFk"/>
+                                    <constraint firstItem="eH5-vh-M37" firstAttribute="leading" secondItem="JL0-wp-0g0" secondAttribute="trailing" constant="2" id="tZL-we-fi2"/>
+                                    <constraint firstItem="JL0-wp-0g0" firstAttribute="top" secondItem="MAE-JE-1eM" secondAttribute="top" id="tpG-uA-Guz"/>
+                                    <constraint firstItem="R9b-Ir-E5O" firstAttribute="leading" secondItem="MAE-JE-1eM" secondAttribute="leading" id="uCn-T5-wfK"/>
+                                    <constraint firstItem="OdH-Ls-iSI" firstAttribute="top" secondItem="B1g-Sd-xif" secondAttribute="bottom" constant="4" id="vFM-yh-Qg0"/>
+                                    <constraint firstItem="rxq-az-QPN" firstAttribute="top" secondItem="eXm-pW-8Zm" secondAttribute="bottom" constant="6" id="vVe-tL-Lsf"/>
+                                    <constraint firstItem="bms-1i-PYO" firstAttribute="leading" secondItem="MAE-JE-1eM" secondAttribute="leading" id="wTi-gz-mgI"/>
+                                    <constraint firstItem="OdH-Ls-iSI" firstAttribute="leading" secondItem="Ebo-bI-wgL" secondAttribute="trailing" constant="2" id="wZQ-0H-DD6"/>
+                                    <constraint firstAttribute="bottom" secondItem="rxq-az-QPN" secondAttribute="bottom" constant="-8" id="zR2-iR-KZE"/>
+                                    <constraint firstItem="B1g-Sd-xif" firstAttribute="top" secondItem="eH5-vh-M37" secondAttribute="bottom" constant="4" id="zwv-PL-OcR"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="4vh-5k-LNu">
+                                <rect key="frame" x="0.0" y="272.33333333333331" width="393" height="129.66666666666669"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="95"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="pNd-Wu-pdV">
+                                <rect key="frame" x="0.0" y="149" width="393" height="123.33333333333331"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123.33" id="Lkm-EE-ki8"/>
+                                    <constraint firstAttribute="width" constant="393" id="fha-Cf-f36"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="95"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="pNd-Wu-pdV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bsy-cj-PFO"/>
+                            <constraint firstItem="4vh-5k-LNu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GqR-Rb-PDb"/>
+                            <constraint firstItem="MAE-JE-1eM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I0d-3c-CiF"/>
+                            <constraint firstItem="4vh-5k-LNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ivx-OD-gBE"/>
+                            <constraint firstItem="4vh-5k-LNu" firstAttribute="top" secondItem="pNd-Wu-pdV" secondAttribute="bottom" id="JST-hh-7tO"/>
+                            <constraint firstAttribute="bottom" secondItem="MAE-JE-1eM" secondAttribute="bottom" id="Jov-x5-UjK"/>
+                            <constraint firstItem="pNd-Wu-pdV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lif-7b-qzL"/>
+                            <constraint firstItem="MAE-JE-1eM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QNp-4z-DUC"/>
+                            <constraint firstItem="pNd-Wu-pdV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="eam-e9-H1Q"/>
+                            <constraint firstItem="MAE-JE-1eM" firstAttribute="top" secondItem="4vh-5k-LNu" secondAttribute="bottom" id="qR4-dG-U7w"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultTextField" destination="4vh-5k-LNu" id="tJ4-if-44K"/>
+                        <outlet property="sayiTextField" destination="pNd-Wu-pdV" id="HFu-oS-cwI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="58.778625954198468" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="delete.right" catalog="system" width="128" height="102"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
